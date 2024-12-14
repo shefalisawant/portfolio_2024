@@ -62,7 +62,7 @@ const Experience = () => {
                     window?.open("https://github.com/shefalisawant/Resume")
                   }
                 >
-                  Check Resume
+                  Check Full Resume
                 </button>
         </div>
 
