@@ -42,11 +42,13 @@
 }
 
 .app__work-portfolio {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+ grid-template-columns: auto auto auto;
   justify-content: center;
   align-items: center;
-
+@media screen and (max-width: 450px) {
+  grid-template-columns: auto;
+}
   .app__work-item {
     width: 350px;
     flex-direction: column;
@@ -144,7 +146,37 @@
       margin-top: 3rem;
     }
   }
+button {
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--secondary-color);
+    margin-top:2rem;
+    font-weight: 600;
+    color: var(--white-color);
+    outline: none;
+    font-family: var(--font-base);
 
+    transition: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+    cursor: pointer;
+
+    &:hover {
+      background-color: #86b6a8;
+      color:black;
+    }
+  }
+  .app__work-buttons{
+    display: flex;
+    direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    width:100%;
+
+    @media screen and (min-width: 2000px) {
+      margin-top: 2rem;
+    }
+  } 
   .app__work-tag {
     position: absolute;
 
