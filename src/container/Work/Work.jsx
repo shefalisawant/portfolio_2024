@@ -64,7 +64,7 @@ const Work = () => {
             >
               <img src={urlFor(work.imgUrl)} alt={work.name} />
 
-              <motion.div
+              {/* <motion.div
                 whileHover={{ opacity: [0, 1] }}
                 transition={{ duration: 0.25, ease: 'easeInOut', staggerChildren: 0.5 }}
                 className="app__work-hover app__flex"
@@ -90,13 +90,25 @@ const Work = () => {
                     <AiFillGithub />
                   </motion.div>
                 </a>}
-              </motion.div>
+              </motion.div> */}
             </div>
 
             <div className="app__work-content app__flex">
               <h4 className="bold-text">{work.title}</h4>
               <p className="p-text" style={{ marginTop: 10 }}>{work.description}</p>
-
+              <div className='app__work-btns app__flex'>
+               {work?.projectLink && <button type="button" className="p-text" onClick={()=>window?.open(work.projectLink)}>View Live</button>}
+               {/* {work?.codeLink && <a href={work.codeLink} target="_blank" rel="noreferrer">
+                  <motion.div
+                    whileInView={{ scale: [0, 1] }}
+                    whileHover={{ scale: [1, 0.90] }}
+                    transition={{ duration: 0.25 }}
+                    className="app__flex"
+                  >
+                    <AiFillGithub />
+                  </motion.div>
+                </a>} */}
+                </div>
               {/* <div className="app__work-tag app__flex">
                 <p className="p-text">{work.tags[0]}</p>
               </div> */}
